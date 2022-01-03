@@ -75,10 +75,18 @@ const Hero = (props) => {
               data-wait="100"
               data-words='["Web Development!", "Machine learning!", "Competitive programming!"]'
             >
-              Web Development!
+              Coding
             </span>
           </SectionText>
-          <Button onClick={props.handleClick}>Learn More</Button>
+          <Button onClick={props.handleClick}>
+            <a
+              href="/pdf/UtkarshGoel_Resume.pdf"
+              download="UtkarshGoel_Resume"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Download Resume
+            </a>
+          </Button>
         </LeftSection>
       </Section>
     </>
