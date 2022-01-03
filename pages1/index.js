@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 import Acomplishments from "../components/Acomplishments/Acomplishments";
 import BgAnimation from "../components/BackgrooundAnimation/BackgroundAnimation";
 import Hero from "../components/Hero/Hero";
@@ -7,9 +9,8 @@ import Technologies from "../components/Technologies/Technologies";
 import Timeline from "../components/TimeLine/TimeLine";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
-// import "animate.css";
 
-const Home = () => {
+export default function Home() {
   return (
     <Layout>
       <Section grid>
@@ -22,6 +23,4 @@ const Home = () => {
       <Acomplishments />
     </Layout>
   );
-};
-
-export default Home;
+}

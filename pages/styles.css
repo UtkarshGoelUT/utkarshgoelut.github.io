@@ -1,0 +1,12 @@
+body {
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+  overflow: scroll;
+}
+
+main {
+}
+
+section {
+  scroll-snap-align: start;
+}
