@@ -16,7 +16,7 @@ import { Box, Boxes, BoxNum, BoxText } from "./AcomplishmentsStyles";
 
 const Acomplishments = () => {
   const [data, setData] = useState([
-    { number: 0, final: 4, info: " star", text: "Codechef" },
+    { number: 0, final: 5, info: " star", text: "Codechef" },
     { info: "Specialist", text: "Codeforces" },
     { number: 0, final: 1825, info: " rating", text: "Leetcode" },
     { number: 0, final: 303, info: " rank", text: "Google Kickstart" },
