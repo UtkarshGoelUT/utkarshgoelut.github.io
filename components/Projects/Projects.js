@@ -21,7 +21,7 @@ import {
 } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
 import { FaReact, FaNode } from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
+import { DiMongodb, DiPython } from "react-icons/di";
 import { SiTensorflow, SiSelenium, SiFirebase } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import theme from "../../themes/default";
@@ -45,6 +45,7 @@ const Projects = () => {
     else if (t == "Tensorflow") return <SiTensorflow size="30px" />;
     else if (t == "Selenium") return <SiSelenium size="30px" />;
     else if (t == "Firebase") return <SiFirebase size="30px" />;
+    else if (t == "Python") return <DiPython size="30px" />;
     else return t;
   };
 

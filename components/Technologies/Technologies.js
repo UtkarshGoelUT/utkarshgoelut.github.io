@@ -51,7 +51,7 @@ const Technologies = () => (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
             Experience with <br />
-            Node.js
+            Node.js, Java Dropwizard
           </ListParagraph>
         </ListContainer>
       </ListItem>

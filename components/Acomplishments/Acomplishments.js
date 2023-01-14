@@ -16,10 +16,11 @@ import { Box, Boxes, BoxNum, BoxText } from "./AcomplishmentsStyles";
 
 const Acomplishments = () => {
   const [data, setData] = useState([
+    { info: " Asia West Finalist", text: "ICPC" },
+    { info: "Expert", text: "Codeforces" },
     { number: 0, final: 5, info: " star", text: "Codechef" },
-    { info: "Specialist", text: "Codeforces" },
-    { number: 0, final: 1939, info: " rating", text: "Leetcode" },
-    { number: 0, final: 303, info: " rank", text: "Google Kickstart" },
+    { number: 0, final: 2026, info: " rating", text: "Leetcode" },
+    ,
   ]);
 
   // useEffect(() => {
