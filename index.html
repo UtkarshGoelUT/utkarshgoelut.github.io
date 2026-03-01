@@ -88,11 +88,14 @@
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-navy-900/80 border-b border-navy-700" id="navbar">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-accent font-bold text-xl tracking-wider">UG<span class="text-slate-light">.</span></a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <a href="#about" class="hover:text-accent transition-colors">About</a>
                 <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
                 <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
                 <a href="#achievements" class="hover:text-accent transition-colors">Achievements</a>
+                <button onclick="openModal()" class="px-4 py-2 rounded border border-accent text-accent hover:bg-accent/10 transition-colors font-mono text-xs ml-4">
+                    Resume
+                </button>
             </div>
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden text-accent focus:outline-none">
@@ -106,6 +109,7 @@
                 <a href="#experience" class="hover:text-accent transition-colors mobile-link">Experience</a>
                 <a href="#skills" class="hover:text-accent transition-colors mobile-link">Skills</a>
                 <a href="#achievements" class="hover:text-accent transition-colors mobile-link">Achievements</a>
+                <button onclick="openModal()" class="hover:text-accent transition-colors mobile-link text-accent">Resume</button>
             </div>
         </div>
     </nav>
@@ -125,6 +129,9 @@
                 <a href="mailto:ugoel911@gmail.com" class="px-7 py-3 rounded border border-accent text-accent hover:bg-accent/10 transition-colors font-mono text-sm">
                     Get In Touch
                 </a>
+                <button onclick="openModal()" class="px-7 py-3 rounded bg-accent text-navy-900 font-bold hover:bg-accent/80 transition-colors font-mono text-sm shadow-[0_0_15px_rgba(100,255,218,0.3)]">
+                    View Resume
+                </button>
                 <div class="flex space-x-5 ml-4 text-2xl">
                     <a href="https://github.com/UtkarshGoelUT" target="_blank" class="hover-text-accent transition-colors"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/utkarshgoelut" target="_blank" class="hover-text-accent transition-colors"><i class="fab fa-linkedin"></i></a>
@@ -133,34 +140,11 @@
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="py-20 reveal">
-            <div class="flex items-center mb-10">
-                <h3 class="text-2xl md:text-3xl font-bold text-slate-light whitespace-nowrap"><span class="text-accent font-mono text-xl mr-2">01.</span> Education</h3>
-                <div class="h-[1px] bg-navy-700 w-full ml-6"></div>
-            </div>
-            <div class="bg-navy-800 rounded-lg p-8 hover:-translate-y-1 transition-transform border border-navy-700">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                    <div>
-                        <h4 class="text-xl font-bold text-slate-light">Punjab Engineering College (PEC)</h4>
-                        <p class="text-lg text-accent mt-1">Bachelor of Technology in Computer Science</p>
-                    </div>
-                    <div class="text-left md:text-right mt-2 md:mt-0">
-                        <p class="text-slate font-mono text-sm"><i class="fas fa-calendar-alt mr-2"></i>Graduated: June 2023</p>
-                        <p class="text-slate font-mono text-sm mt-1"><i class="fas fa-map-marker-alt mr-2"></i>Chandigarh</p>
-                    </div>
-                </div>
-                <p class="text-slate mb-4"><strong class="text-slate-light">GPA:</strong> 8.3 / 10</p>
-                <p class="text-slate text-sm leading-relaxed">
-                    <strong class="text-slate-light">Relevant Coursework:</strong> Object Oriented Programming C++, Data Structures and Algorithms, Python Programming, Software Engineering, Operating Systems, Database Management Systems, Machine Learning.
-                </p>
-            </div>
-        </section>
 
         <!-- Experience Section -->
         <section id="experience" class="py-20 reveal">
             <div class="flex items-center mb-10">
-                <h3 class="text-2xl md:text-3xl font-bold text-slate-light whitespace-nowrap"><span class="text-accent font-mono text-xl mr-2">02.</span> Experience</h3>
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-light whitespace-nowrap"><span class="text-accent font-mono text-xl mr-2">01.</span> Experience</h3>
                 <div class="h-[1px] bg-navy-700 w-full ml-6"></div>
             </div>
 
@@ -260,6 +244,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="py-20 reveal">
+            <div class="flex items-center mb-10">
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-light whitespace-nowrap"><span class="text-accent font-mono text-xl mr-2">02.</span> Education</h3>
+                <div class="h-[1px] bg-navy-700 w-full ml-6"></div>
+            </div>
+            <div class="bg-navy-800 rounded-lg p-8 hover:-translate-y-1 transition-transform border border-navy-700">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-light">Punjab Engineering College (PEC)</h4>
+                        <p class="text-lg text-accent mt-1">Bachelor of Technology in Computer Science</p>
+                    </div>
+                    <div class="text-left md:text-right mt-2 md:mt-0">
+                        <p class="text-slate font-mono text-sm"><i class="fas fa-calendar-alt mr-2"></i>Graduated: June 2023</p>
+                        <p class="text-slate font-mono text-sm mt-1"><i class="fas fa-map-marker-alt mr-2"></i>Chandigarh</p>
+                    </div>
+                </div>
+                <p class="text-slate mb-4"><strong class="text-slate-light">GPA:</strong> 8.3 / 10</p>
+                <p class="text-slate text-sm leading-relaxed">
+                    <strong class="text-slate-light">Relevant Coursework:</strong> Object Oriented Programming C++, Data Structures and Algorithms, Python Programming, Software Engineering, Operating Systems, Database Management Systems, Machine Learning.
+                </p>
             </div>
         </section>
 
@@ -413,6 +421,28 @@
         <p>Built by Utkarsh Goel</p>
     </footer>
 
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="fixed inset-0 z-[100] hidden bg-navy-900/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div class="bg-navy-800 border border-navy-700 rounded-lg shadow-2xl w-full max-w-5xl h-[85vh] flex flex-col transform scale-95 transition-transform duration-300" id="modalContent">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-4 border-b border-navy-700">
+                <h3 class="text-xl font-bold text-slate-light">Resume</h3>
+                <div class="flex space-x-4 items-center">
+                    <a href="https://drive.google.com/uc?export=download&id=1AxgO79i422y1Xqds95NZL-krGdCpVwcn" target="_blank" class="px-4 py-2 rounded bg-accent/10 border border-accent text-accent hover:bg-accent hover:text-navy-900 transition-colors font-mono text-sm flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </a>
+                    <button onclick="closeModal()" class="text-slate hover:text-accent transition-colors focus:outline-none p-1">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Modal Body (iframe) -->
+            <div class="flex-grow w-full bg-white rounded-b-lg overflow-hidden">
+                <iframe src="https://drive.google.com/file/d/1AxgO79i422y1Xqds95NZL-krGdCpVwcn/preview" class="w-full h-full border-none" allow="autoplay"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
         // Mobile Menu Toggle
@@ -463,6 +493,36 @@
         window.addEventListener("scroll", reveal);
         // Trigger once on load
         reveal();
+
+        // Modal Logic
+        const modal = document.getElementById('resumeModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            // Small delay to allow display block to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }, 300); // Matches transition duration
+        }
+
+        // Close modal when clicking outside of it
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
